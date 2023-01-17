@@ -1,12 +1,13 @@
 # Core Data (CRUD) with SwiftUI
 
-This project has been created as a simple POC for getting familiar with core data and operations with it.
-
 ![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white)
 
-A | B
-- | - 
-![alt](yourimg1.jpg) | ![alt](yourimg2.jpg)
+This project has been created as a simple POC for getting familiar with Core Data and operations with it.
+
+<p align="center">
+ <img src="https://github.com/LuciaHarcekova/POC-Core-Data-CRUD-SwiftUI-mobile-app/blob/main/img/notes_list.png" alt="notes_list"/>
+ <img src="https://github.com/LuciaHarcekova/POC-Core-Data-CRUD-SwiftUI-mobile-app/blob/main/img/note_details.png" alt="note_details"/>
+</p>
 
 ## Core Data
 
