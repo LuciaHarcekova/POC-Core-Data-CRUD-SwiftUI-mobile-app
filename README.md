@@ -1,6 +1,14 @@
 # Core Data (CRUD) with SwiftUI
 
+This project has been created as a simple POC for getting familiar with core data and operations with it.
+
 ![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white)
+
+A | B
+- | - 
+![alt](yourimg1.jpg) | ![alt](yourimg2.jpg)
+
+## Core Data
 
 Core Data is a graphical and persistence framework, which is used in Apple devices with operating systems macOS and iOS. Core Data was first introduced in Mac OS X 10.4 Tiger and iOS with iPhone SDK 3.0. It allows data to be organized in a relational entity–attribute model manner, so that it can be serialized into XML, binary, or SQLite stores.
 You can utilize Core Data to save your application’s permanent data for offline use, to cache temporary data, and to add undo functionality to your app on a single device.
