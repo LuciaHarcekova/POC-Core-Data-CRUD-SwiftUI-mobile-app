@@ -16,18 +16,15 @@ struct NoteDetailView: View {
     
     var body: some View {
         ScrollView {
+            Text("Priority: " + String(note.priority))
+            Text("Color as HEX: " + (note.colorAsHex ?? "No color as HEX"))
             Text(note.text ?? "No text")
-                .background(Rectangle().fill(Color(note.color ?? UIColor.blue)))
-            Text(note.colorAsHex ?? "No colorAsHex")
+                .background(Rectangle().fill(Color(note.color ?? UIColor.clear)))
         }
         .navigationTitle(note.title ?? "Unknown Note")
         .navigationBarTitleDisplayMode(.inline)
-        .alert("Delete note?", isPresented: $showingDeleteAlert) {
-            Button("Delete", role: .destructive, action: deleteNote)
-            Button("Cancel", role: .cancel) { }
-        } message: {
-            Text("Are you sure?")
-        }
+        
+        // Delete functionality
         .toolbar {
             Button {
                 showingDeleteAlert = true
@@ -35,6 +32,13 @@ struct NoteDetailView: View {
                 Label("Delete this note", systemImage: "trash")
             }
         }
+        .alert("Delete note?", isPresented: $showingDeleteAlert) {
+            Button("Delete", role: .destructive, action: deleteNote)
+            Button("Cancel", role: .cancel) { }
+        } message: {
+            Text("Are you sure?")
+        }
+        
     }
     
     func deleteNote() {

@@ -11,15 +11,12 @@ struct ColorPickerView: View {
     
     @Binding var color: Color
     
-    @State private var bgColor = Color.blue.opacity(0.5)
-    
     var body: some View {
         VStack {
             ColorPicker("Choose a background color", selection: $color)
                 .padding(.horizontal)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(bgColor)
         .ignoresSafeArea()
     }
 }

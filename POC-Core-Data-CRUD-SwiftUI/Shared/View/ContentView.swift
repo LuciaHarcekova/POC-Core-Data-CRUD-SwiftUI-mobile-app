@@ -30,7 +30,7 @@ struct ContentView: View {
                                 .font(.title)
                             
                             HStack {
-                                Text(String(note.priority))
+                                Text("Priority: " + String(note.priority))
                                     .font(.caption)
                                 
                                 Spacer()
@@ -39,11 +39,17 @@ struct ContentView: View {
                                     .font(.caption)
                             }
                             
-                            Spacer()
+                           // Spacer()
                             Text(note.text ?? "Unknown Text")
                                 .foregroundColor(.secondary)
+                                .frame(height: 30)
+                                .truncationMode(.tail)
                         }
                     }
+                    .listRowBackground(Color(note.color ?? UIColor.clear))
+                    
+                    // this foes background of only small rectangle not the whole row
+                    // .background(Color(note.color ?? UIColor.clear))
                 }
                 .onDelete(perform: deleteNotes)
             }
