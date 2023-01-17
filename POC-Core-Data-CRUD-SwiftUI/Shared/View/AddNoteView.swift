@@ -40,6 +40,7 @@ struct AddNoteView: View {
                         newNote.id = UUID()
                         newNote.title = title
                         newNote.text = text
+                        newNote.creationDate = Date()
                         newNote.priority = Int16(priority)
                         newNote.color = UIColor(color)
                         

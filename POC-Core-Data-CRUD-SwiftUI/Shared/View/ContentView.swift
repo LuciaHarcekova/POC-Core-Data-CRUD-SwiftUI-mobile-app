@@ -16,6 +16,7 @@ struct ContentView: View {
     
     @State private var showingAddScreen = false
     
+    
     var body: some View {
         NavigationView {
             List {
@@ -24,9 +25,21 @@ struct ContentView: View {
                         NoteDetailView(note: note)
                     } label: {
                         VStack(alignment: .leading) {
-                            Text(note.title ?? "Unknown Title")
-                                .font(.headline)
+
+                            note.title.map(Text.init)
+                                .font(.title)
                             
+                            HStack {
+                                Text(String(note.priority))
+                                    .font(.caption)
+                                
+                                Spacer()
+
+                                Text(note.creationDate ?? Date(), format: Date.FormatStyle().year().month().day().weekday().hour().minute().second().timeZone())
+                                    .font(.caption)
+                            }
+                            
+                            Spacer()
                             Text(note.text ?? "Unknown Text")
                                 .foregroundColor(.secondary)
                         }

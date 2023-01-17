@@ -42,6 +42,9 @@ let newNote = Note(context: moc)
 newNote.id = UUID()
 newNote.title = title
 newNote.text = text
+newNote.creationDate = Date()
+newNote.priority = Int16(priority)
+newNote.color = UIColor(color)
 ```
 - For each key, you need to set values for the records.
 ```
